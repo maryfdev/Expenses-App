@@ -20,7 +20,8 @@ const Expenses = (props) => {
     <ExpensesFilter selected={selectedYear} onSaveYear={saveYearHandler}/>
     {
 
-      props.items.filter((item) => item.date.getFullYear() == selectedYear).map( (element) => 
+      props.items.filter((item) => item.date.getFullYear() == selectedYear)
+.map( (element) => 
         <ExpenseItem
         key={element.id}
         title={element.title}
